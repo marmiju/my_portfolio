@@ -36,9 +36,6 @@ const SkillsSection = async () => {
                         {data.title}
                     </h1>
                 </div>
-
-
-
             ))}
         </div>
     );
