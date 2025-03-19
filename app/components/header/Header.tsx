@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Header = () => {
     return (
-        <div className='w-80 md:w-96 rounded-full fixed left-1/2 transform -translate-x-1/2 mt-0 md:mt-2 p-1 backdrop-blur-xl shadow-lg border border-white text-gray-500'>
+        <div className='w-80 md:w-96 rounded-full fixed left-1/2 transform -translate-x-1/2 z-10 mt-0 md:mt-2 p-1 backdrop-blur-xl shadow-lg border border-white text-gray-500'>
             <ul className='flex w-full justify-center space-x-5 hover:cursor-pointer'>
                 <Link href={'/'}>
                     <li>
