@@ -1,17 +1,10 @@
 "use client"
 import React from 'react'
 import { DesignationLoop } from '../designationLoop/DesignationLoop'
-import { Montserrat_Alternates } from 'next/font/google'
 import { IconButton } from '../iconButton/IconButton'
+import { monserat, monserat_text } from '@/lib/fonts/monsera'
 
-export const monserat = Montserrat_Alternates({
-    subsets: ['latin'],
-    weight: '800'
-})
-export const monserat_text = Montserrat_Alternates({
-    subsets: ['latin'],
-    weight: '500'
-})
+
 
 
 export type ProfileType = {
@@ -46,11 +39,11 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
 
             </div>
             <h1 className='text-gray-400'>Hello! i'm</h1>
-            <h1 className={`text-4xl md:text-6xl lg:text-7xl font-extrabold ${monserat.className}`}>{profile.name}</h1>
-            <h1 className={`absolute opacity-5  mt-20 text-4xl md:text-6xl lg:text-7xl font-extrabold ${monserat.className}`}>{profile.name}</h1>
+            <h1 className={`text-4xl md:text-6xl  lg:text-7xl font-extrabold ${monserat.className}`}>{profile.name}</h1>
+            <h1 className={`absolute opacity-5 block md:hidden lg:block  mt-20 text-4xl md:text-6xl lg:text-7xl font-extrabold ${monserat.className}`}>{profile.name}</h1>
             <div className='grid lg:flex justify-center md:justify-start lg:justify-between'>
 
-                <div className="flex justify-center md:justify-start space-x-1.5">
+                <div className="flex justify-center md:justify-start transform duration-1000 space-x-1.5">
                     {
                         profile.social.map((data, i) => {
                             return <IconButton key={i} social={data} />
@@ -65,3 +58,5 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
         </div>
     )
 }
+export { monserat }
+

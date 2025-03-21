@@ -9,7 +9,6 @@ export const Hero = async () => {
     console.log(profile.name)
     return (
         <div className='flex my-2 rounded-2xl bg-[#f5f5f5] flex-col-reverse md:h-[600px]  md:flex-row md:max-w-[700px] lg:max-w-[1200px] mt-10 md:mt-0 mx-auto items-center justify-between self-center'>
-
             <HeroContent key={profile.name} profile={profile} />
             <div className=' grid grid-cols-1 justify-center'>
                 <Image

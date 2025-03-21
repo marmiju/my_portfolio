@@ -1,5 +1,4 @@
-import { url } from 'inspector'
-import React from 'react'
+
 
 export const getProfileData = async () => {
     const url = 'http://localhost:5000/api/profile'
