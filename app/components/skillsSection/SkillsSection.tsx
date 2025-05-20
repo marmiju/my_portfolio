@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { div } from "framer-motion/client";
 import { Montserrat } from "next/font/google";
 import { Circle, Line } from "rc-progress";
+import backroundImage from "../../../lib/backgroundImage.png";
 
 export type skillsType = skillspro[];
 
@@ -30,10 +31,8 @@ const SkillsSection = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       const skillsData = await getSkills();
-      console.log(skillsData);
       setSkills(skillsData);
     };
-
     fetchSkills();
   }, []);
 
@@ -45,28 +44,36 @@ const SkillsSection = () => {
 
   return (
     <div
-      className={`grid md:flex bg-gray-50 text-gray-600 p-4 ${montserat.className}`}
+      // style={{
+      //   backgroundImage: `url(${backroundImage.src})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
+      className={`grid md:flex gap-2 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
     >
-      <div className="">
-        <h1>What I Know And Do Fun</h1>
-        <SkillNave setskillNav={handleSkillNav} />
+      <div className="shadow-md inset-shadow p-1 bg-slate-100  w-96 mx-auto border border-black/10  ">
+        <SkillNave SkillNAv={handleSkillNav} />
       </div>
       <div
-        className={`grid text-2xl items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3 p-8 justify-itecenter max-w-[1200px] mx-auto`}
+        className={`grid text-2xl  grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-0   max-w-[1200px] mx-auto`}
       >
+        <h1 className=" content-center  text-center border border-slate-300 rounded-tl-2xl">
+          What I Know And Do Fun
+        </h1>
         {filteredSkills.length > 0 ? (
           filteredSkills.map((data, i) => (
             <div
               key={i}
-              className=" bg-white shadow-gray-300 shadow-md border-y-gray-400 hover:scale-105 hover:bg-blend-overlay transition-all duration-300 hover:shadow-2xl rounded-2xl flex flex-col justify-center items-center p-4 group"
+              className="border border-slate-300 hover:cursor-pointer backdrop-blur-md transition-all duration-300 grayscale-100  hover:grayscale-0 flex flex-col justify-center items-center p-2 group"
             >
               <Image
                 className="rounded-2xl"
                 src={data.url}
                 alt={data.title}
-                height={100}
-                width={100}
+                height={80}
+                width={80}
               />
+              9.9
             </div>
           ))
         ) : (

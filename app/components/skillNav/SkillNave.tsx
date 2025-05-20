@@ -3,26 +3,33 @@ import { SkillNavigateData } from "@/lib/navigate/SkillNavigate";
 import React, { useState } from "react";
 
 type skillNav = {
-  setskillNav: (value: string) => void;
+  SkillNAv: (value: string) => void;
 };
 
-export const SkillNave: React.FC<skillNav> = ({ setskillNav }) => {
+export const SkillNave: React.FC<skillNav> = ({ SkillNAv }) => {
   const skillsNavData = SkillNavigateData();
   const [skillnav, setSkillnav] = useState("All");
 
   const onchenge = (data: string) => {
     setSkillnav(data);
+    SkillNAv(data);
   };
 
   return (
-    <div className="grid grid-cols-1 text-sm gap-x-4 space-x-2.5 font-normal mt-2">
+    <div className=" grid text-slate-600 ">
       {skillsNavData.map((data, i) => (
         <button
           key={i}
           onClick={() => onchenge(data)}
-          className={` hover:bg-gray-200 shadow-gray-400 shadow-2xl font-semibold ${
-            skillnav === data ? "bg-gray-200 mb-2  " : " text-gray-400 bg-white"
-          }  py-1 hover:shadow hover:cursor-pointer transition-all duration-300 rounded-r-sm`}
+          className={`
+          text-start px-2 py-1
+          ${
+            skillnav === data
+              ? "bg-white text-slate-800  "
+              : " bg-slate-100 text-slate-400"
+          }
+          hover:cursor-pointer 
+          `}
         >
           {data}
         </button>

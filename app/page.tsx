@@ -1,15 +1,23 @@
-import { useRef } from "react";
 import { Hero } from "./pages/Hero/Hero";
 import SkillsSection from "./components/skillsSection/SkillsSection";
-
-
+import backgroundImage from "../lib/backgroundImage.png";
 
 export default function Home() {
   return (
-    <div className="md:max-w-[600px] lg:max-w-[1200px] mx-auto">
-      <Hero />
-      <SkillsSection />
+    <div
 
+    // style={{
+    //   backgroundImage: `url(${backgroundImage.src})`,
+    //   backgroundSize: "cover",
+    //   backgroundAttachment: "fixed", // keeps it fixed
+    //   backgroundPosition: "center",
+    // }}
+    >
+      <Hero />
+
+      <div className="h-screen">
+        <SkillsSection />
+      </div>
     </div>
   );
 }
