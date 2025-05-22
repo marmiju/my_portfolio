@@ -1,35 +1,44 @@
 "use client";
 import { SkillNavigateData } from "@/lib/navigate/SkillNavigate";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type skillNav = {
   SkillNAv: (value: string) => void;
 };
 
 export const SkillNave: React.FC<skillNav> = ({ SkillNAv }) => {
-  const skillsNavData = SkillNavigateData();
   const [skillnav, setSkillnav] = useState("All");
+  const [skillsNavData, setSkillsNavData] = useState<string[]>([]); // state for async data
 
-  const onchenge = (data: string) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const navData = await SkillNavigateData();
+        setSkillsNavData(navData);
+      } catch (error) {
+        console.error("Failed to fetch skill categories", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const onChange = (data: string) => {
     setSkillnav(data);
     SkillNAv(data);
   };
 
   return (
-    <div className=" grid text-slate-600 ">
+    <div className="grid text-black">
       {skillsNavData.map((data, i) => (
         <button
           key={i}
-          onClick={() => onchenge(data)}
-          className={`
-          text-start px-2 py-1
-          ${
+          onClick={() => onChange(data)}
+          className={`text-start px-2 py-1 ${
             skillnav === data
-              ? "bg-white text-slate-800  "
-              : " bg-slate-100 text-slate-400"
-          }
-          hover:cursor-pointer 
-          `}
+              ? "bg-black/90 text-white"
+              : "bg-white textblack/70"
+          } hover:cursor-pointer`}
         >
           {data}
         </button>

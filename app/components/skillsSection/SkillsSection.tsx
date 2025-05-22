@@ -8,6 +8,7 @@ import { div } from "framer-motion/client";
 import { Montserrat } from "next/font/google";
 import { Circle, Line } from "rc-progress";
 import backroundImage from "../../../lib/backgroundImage.png";
+import { ProgressBar } from "../ProgressBar/ProgressBar";
 
 export type skillsType = skillspro[];
 
@@ -49,31 +50,38 @@ const SkillsSection = () => {
       //   backgroundSize: "cover",
       //   backgroundPosition: "center",
       // }}
-      className={`grid md:flex gap-2 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
+      className={`grid md:flex text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
     >
-      <div className="shadow-md inset-shadow p-1 bg-slate-100  w-96 mx-auto border border-black/10  ">
+      <div className="border bg-white  w-96 mx-auto border-black/15 ">
         <SkillNave SkillNAv={handleSkillNav} />
       </div>
       <div
         className={`grid text-2xl  grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-0   max-w-[1200px] mx-auto`}
       >
-        <h1 className=" content-center  text-center border border-slate-300 rounded-tl-2xl">
+        <h1 className=" content-center  text-center border border-black/10 ">
           What I Know And Do Fun
         </h1>
         {filteredSkills.length > 0 ? (
           filteredSkills.map((data, i) => (
             <div
               key={i}
-              className="border border-slate-300 hover:cursor-pointer backdrop-blur-md transition-all duration-300 grayscale-100  hover:grayscale-0 flex flex-col justify-center items-center p-2 group"
+              className="border border-slate-300 hover:cursor-pointer 
+              backdrop-blur-md transition-all duration-300 grayscale 
+              hover:grayscale-0 flex flex-col justify-center items-center 
+              p-4 gap-4 group "
             >
               <Image
-                className="rounded-2xl"
+                className="rounded-2xl duration-500"
                 src={data.url}
                 alt={data.title}
                 height={80}
                 width={80}
               />
-              9.9
+
+              {/* Tooltip-like hover effect at bottom */}
+              <div className="duration-300 transition-all bottom-[-50px] w-full  group-hover:flex justify-center">
+                <ProgressBar skillData={data} />
+              </div>
             </div>
           ))
         ) : (
