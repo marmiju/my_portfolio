@@ -56,7 +56,7 @@ const SkillsSection = () => {
         className={`grid text-2xl  grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-0   max-w-[1200px] mx-auto`}
       >
         <h1 className=" content-center  text-center border border-black/10 ">
-          What I Know And Do Fun
+          {`What I Know And Do Fun`}
         </h1>
         {filteredSkills.length > 0 ? (
           filteredSkills.map((data, i) => (
@@ -83,7 +83,7 @@ const SkillsSection = () => {
           ))
         ) : (
           <p className="text-center w-full text-gray-500 col-span-full">
-            No skills found for "{selectedSkills}"
+            No skills found for {selectedSkills}
           </p>
         )}
       </div>
