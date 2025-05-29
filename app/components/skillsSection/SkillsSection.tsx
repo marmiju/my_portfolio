@@ -42,11 +42,6 @@ const SkillsSection = () => {
 
   return (
     <div
-      // style={{
-      //   backgroundImage: `url(${backroundImage.src})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      // }}
       className={`grid md:flex text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
     >
       <div className="border bg-white  w-96 mx-auto border-black/15 ">

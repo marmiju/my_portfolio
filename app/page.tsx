@@ -3,15 +3,7 @@ import SkillsSection from "./components/skillsSection/SkillsSection";
 
 export default function Home() {
   return (
-    <div
-
-    // style={{
-    //   backgroundImage: `url(${backgroundImage.src})`,
-    //   backgroundSize: "cover",
-    //   backgroundAttachment: "fixed", // keeps it fixed
-    //   backgroundPosition: "center",
-    // }}
-    >
+    <div>
       <Hero />
 
       <div className="h-screen">
