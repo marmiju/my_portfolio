@@ -1,6 +1,5 @@
 import { Hero } from "./pages/Hero/Hero";
 import SkillsSection from "./components/skillsSection/SkillsSection";
-import backgroundImage from "../lib/backgroundImage.png";
 
 export default function Home() {
   return (
