@@ -2,7 +2,6 @@ import {
   HeroContent,
   ProfileType,
 } from "@/app/components/heroContent/heroContent";
-import { IconButton } from "@/app/components/iconButton/IconButton";
 import { getProfileData } from "@/lib/profile";
 import Image from "next/image";
 import React from "react";
