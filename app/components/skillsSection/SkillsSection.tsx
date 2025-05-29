@@ -44,7 +44,7 @@ const SkillsSection = () => {
     <div
       className={`grid md:flex text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
     >
-      <div className="border bg-white  w-96 mx-auto border-black/15 ">
+      <div className="border bg-white  mx-auto border-black/15 ">
         <SkillNave SkillNAv={handleSkillNav} />
       </div>
       <div

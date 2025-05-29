@@ -8,6 +8,7 @@ export default function Home() {
 
       <div className="h-screen">
         <SkillsSection />
+        <section id="experiences">programming</section>
       </div>
     </div>
   );

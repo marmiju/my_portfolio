@@ -1,5 +1,5 @@
 export const getSkills = async () => {
-  const result = await fetch("http://localhost:5000/api/skills");
+  const result = await fetch(`${process.env.NEXT_PUBLIC_END_POINT}/skills`);
   if (!result.ok) {
     throw new Error("Oops! Something Went Wrong!!!");
   }
