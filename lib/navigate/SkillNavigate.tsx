@@ -1,5 +1,5 @@
 export const SkillNavigateData = async () => {
-  let NavList: any[] = ["All"];
+  const NavList: any[] = ["All"];
   const response = await fetch("http://localhost:5000/api/skills");
   if (!response.ok) {
     throw new Error("Oops! Something Went Wrong!!!");

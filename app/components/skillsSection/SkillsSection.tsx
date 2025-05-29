@@ -4,10 +4,7 @@ import { getSkills } from "@/lib/Skills";
 import { montserat } from "@/lib/fonts/monsera";
 import { SkillNave } from "../skillNav/SkillNave";
 import { useState, useEffect } from "react";
-import { div } from "framer-motion/client";
-import { Montserrat } from "next/font/google";
-import { Circle, Line } from "rc-progress";
-import backroundImage from "../../../lib/backgroundImage.png";
+
 import { ProgressBar } from "../ProgressBar/ProgressBar";
 
 export type skillsType = skillspro[];

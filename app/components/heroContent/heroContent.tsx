@@ -2,7 +2,7 @@
 import React from "react";
 import { DesignationLoop } from "../designationLoop/DesignationLoop";
 import { IconButton } from "../iconButton/IconButton";
-import { monsterat_text, montserat } from "@/lib/fonts/monsera";
+import { montserat } from "@/lib/fonts/monsera";
 
 export type ProfileType = {
   url: string;
@@ -31,7 +31,7 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
       <div className="text-gray-400 mb-4 md:mb-10 font-semibold">
         {profile.bio ? "°°°" + profile.bio + "°°°" : ""}
       </div>
-      <h1 className="text-gray-400">Hello! i'm</h1>
+      <h1 className="text-gray-400">Hello! i&apos;m</h1>
       <h1
         className={`text-4xl md:text-6xl  lg:text-7xl font-extrabold ${montserat.className}`}
       >
