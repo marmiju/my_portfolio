@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 
-
 /* /// bg-slate-300 */
 body {
   @apply bg-white
