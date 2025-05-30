@@ -1,7 +1,6 @@
 "use client";
 
 import { HeaderList } from "@/lib/Headerlist";
-import { div } from "framer-motion/client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";

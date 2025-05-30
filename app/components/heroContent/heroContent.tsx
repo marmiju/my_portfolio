@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { DesignationLoop } from "../designationLoop/DesignationLoop";
-import { IconButton } from "../iconButton/IconButton";
 import { montserat } from "@/lib/fonts/monsera";
 
 export type ProfileType = {
