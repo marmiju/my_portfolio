@@ -42,9 +42,9 @@ const SkillsSection = () => {
 
   return (
     <div
-      className={`grid 1 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
+      className={`grid 1 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto `}
     >
-      <div className=" bg-white mx-auto my-4">
+      <div className=" mx-auto my-4">
         <SkillNave SkillNAv={handleSkillNav} />
       </div>
       <div

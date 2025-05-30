@@ -6,18 +6,18 @@ const Experience = async () => {
   const experience: ExperienceType[] = await FetchExperience();
   console.log("Experience", experience);
   return (
-    <div className="max-w-[1200px] mx-auto my-10">
-      <h1 className="text-center font-bold text-2xl m-4">Experience</h1>
-      <div>
+    <div className="max-w-[1200px] mx-auto my-10 p-2">
+      <h1 className="text-center font-bold text-2xl m-4 ">Experience</h1>
+      <div className="space-y-2">
         {experience.map((exp, ind) => {
           return (
             <div
-              className="  flex flex-wrap gap-4 border-b  p-2 border-black/5"
+              className="border bg-white  flex flex-wrap gap-4 rounded-2xl  p-2 border-slate-200 "
               key={ind}
             >
               <div className="">
                 <Image
-                  className=" bg-white items-start p-2 rounded-xl border shadow-md border-black/2"
+                  className=" bg-white items-start p-2 rounded-xl border  border-black/10"
                   width={200}
                   height={200}
                   src={exp.image}
@@ -36,7 +36,7 @@ const Experience = async () => {
                         <p className="font-medium text-xl">
                           {"● " + pos.position}
                         </p>
-                        <div className="border-l-2 ml-1 p-2">
+                        <div className="border-l-2 ml-1 p-2 text-slate-700">
                           <p>{pos.type}</p>
                           <p>
                             {new Date(pos.startDate).toLocaleString("default", {
