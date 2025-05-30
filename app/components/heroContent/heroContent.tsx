@@ -28,7 +28,7 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
     <div
       className={`grid ${montserat.className}  text-xl text-center md:text-left`}
     >
-      <div className="text-gray-400 mb-4 md:mb-10 font-semibold">
+      <div className="text-gray-400 mb-4 md:mb-10 text-sm md:text-2xl font-semibold">
         {profile.bio ? "°°°" + profile.bio + "°°°" : ""}
       </div>
       <h1 className="text-gray-400">Hello! i&apos;m</h1>
@@ -43,10 +43,10 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
         {profile.name}
       </h1>
       <div className="grid lg:flex justify-center md:justify-start lg:justify-between">
-        <div className="flex justify-center md:justify-start transform duration-1000 space-x-1.5">
-          {profile.social.map((data, i) => {
-            return <IconButton key={i} social={data} />;
-          })}
+        <div>
+          <button className="bg-black hover:cursor-pointer hover:bg-gray-100 hover:text-black duration-300 px-4 py-1 text-sm font-medium text-white/90 rounded-full ">
+            Download rursume
+          </button>
         </div>
         <DesignationLoop data={profile.designation} />
       </div>

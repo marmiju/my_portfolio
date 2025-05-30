@@ -42,28 +42,25 @@ const SkillsSection = () => {
 
   return (
     <div
-      className={`grid md:flex text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
+      className={`grid 1 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto`}
     >
-      <div className="border bg-white  mx-auto border-black/15 ">
+      <div className=" bg-white mx-auto my-4">
         <SkillNave SkillNAv={handleSkillNav} />
       </div>
       <div
-        className={`grid text-2xl  grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-0   max-w-[1200px] mx-auto`}
+        className={`flex flex-wrap justify-center text-2xl max-w-[1200px] mx-auto`}
       >
-        <h1 className=" content-center  text-center border border-black/10 ">
-          {`What I Know And Do Fun`}
-        </h1>
         {filteredSkills.length > 0 ? (
           filteredSkills.map((data, i) => (
             <div
               key={i}
-              className="border border-slate-300 hover:cursor-pointer 
+              className="border  border-slate-300 hover:cursor-pointer 
               backdrop-blur-md transition-all duration-300 grayscale 
               hover:grayscale-0 flex flex-col justify-center items-center 
               p-4 gap-4 group "
             >
               <Image
-                className="rounded-2xl duration-500"
+                className="rounded-2xl duration-500 mx-2"
                 src={data.url}
                 alt={data.title}
                 height={80}

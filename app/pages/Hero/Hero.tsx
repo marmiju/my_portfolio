@@ -2,6 +2,7 @@ import {
   HeroContent,
   ProfileType,
 } from "@/app/components/heroContent/heroContent";
+import { IconButton } from "@/app/components/iconButton/IconButton";
 import { getProfileData } from "@/lib/profile";
 import Image from "next/image";
 import React from "react";
@@ -14,13 +15,18 @@ export const Hero = async () => {
       <HeroContent key={profile.name} profile={profile} />
       <div className=" grid grid-cols-1 justify-center">
         <Image
+          width={300}
+          height={300}
           src={profile.url}
           alt="Picture of the author"
           placeholder="blur"
-          width={400}
-          height={400}
           blurDataURL={profile.url}
         />
+        <div className="flex flex-wrap justify-center m-2  transform duration-1000 space-x-1.5">
+          {profile.social.map((data, i) => {
+            return <IconButton key={i} social={data} />;
+          })}
+        </div>
       </div>
     </div>
   );
