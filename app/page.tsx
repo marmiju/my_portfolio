@@ -1,6 +1,5 @@
 import { Hero } from "./pages/Hero/Hero";
 import SkillsSection from "./components/skillsSection/SkillsSection";
-import { FetchExperience } from "@/lib/fatchExperience";
 import Experience from "./pages/experience/Experience";
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
           <Experience />
         </section>
         <footer className="flex justify-center text-4xl text-center h-96 items-center">
-          MAR miju
+          Footer
         </footer>
       </div>
     </div>
