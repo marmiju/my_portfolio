@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 interface icontext {
-  icon?: ReactElement<any, any>;
+  icon?: ReactElement;
   text: string;
 }
 

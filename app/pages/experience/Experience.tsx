@@ -4,7 +4,6 @@ import React from "react";
 
 const Experience = async () => {
   const experience: ExperienceType[] = await FetchExperience();
-  console.log("Experience", experience);
   return (
     <div className="max-w-[1200px] mx-auto my-10 p-2">
       <h1 className="text-center font-bold text-2xl m-4 ">Experience</h1>
@@ -55,7 +54,10 @@ const Experience = async () => {
                           <div className="flex flex-wrap gap-2">
                             {pos.skills.map((skl, index) => {
                               return (
-                                <p className="bg-gray-200 px-2 rounded">
+                                <p
+                                  key={index}
+                                  className="bg-gray-200 px-2 rounded"
+                                >
                                   {skl}
                                 </p>
                               );
