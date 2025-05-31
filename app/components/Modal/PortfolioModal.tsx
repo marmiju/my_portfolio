@@ -4,6 +4,6 @@ interface props {
   project: Project;
 }
 
-export const PortfolioModal: React.FC<props> = ({ project }) => {
+export const PortfolioModal: React.FC<props> = ({}) => {
   return <div className="fixed z-100">PortfolioModal</div>;
 };
