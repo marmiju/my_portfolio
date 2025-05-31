@@ -54,7 +54,7 @@ const SkillsSection = () => {
           filteredSkills.map((data, i) => (
             <div
               key={i}
-              className="border  border-slate-300 hover:cursor-pointer 
+              className="border border-text/20 hover:cursor-pointer 
               backdrop-blur-md transition-all duration-300 grayscale 
               hover:grayscale-0 flex flex-col justify-center items-center 
               p-4 gap-4 group "
@@ -74,7 +74,7 @@ const SkillsSection = () => {
             </div>
           ))
         ) : (
-          <p className="text-center w-full text-gray-500 col-span-full">
+          <p className="text-center w-full text-text col-span-full">
             No skills found for {selectedSkills}
           </p>
         )}

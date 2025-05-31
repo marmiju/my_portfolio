@@ -29,16 +29,14 @@ export const SkillNave: React.FC<skillNav> = ({ SkillNAv }) => {
   };
 
   return (
-    <div className="block text-center text-black/70 space-x-1 space-y-1">
+    <div className="block text-center  space-x-1 space-y-1">
       {skillsNavData.map((data, i) => (
         <button
           key={i}
           onClick={() => onChange(data)}
-          className={`text-center py-1 px-2 rounded-full border border-black/10 
+          className={`text-center py-1 px-4 rounded-full  text-sm  
             ${
-              skillnav === data
-                ? "bg-white shadow text-black/50 "
-                : "bg-slate-200 textblack/70 "
+              skillnav === data ? " text-primary bg-secondary" : " text-text/70"
             } hover:cursor-pointer`}
         >
           {data}

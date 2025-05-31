@@ -14,7 +14,7 @@ export const Avater = async () => {
     <div
       className={`col-span-3 
             ${montserat.className}
-             border border-slate-200 
+             border border-text/20
              rounded-2xl p-2`}
     >
       {/* image flex with username and name */}
@@ -26,7 +26,7 @@ export const Avater = async () => {
           src={profile?.avatar || ""}
           alt={profile?.username || "Profile"}
         />
-        <div>
+        <div className="text-text">
           <p className="font-semibold">{profile?.name || "mar miju"}</p>
           <p className="text-[12px]">{profile?.username || "unknown user"}</p>
           <p className="text-xl font-bold">
@@ -42,11 +42,11 @@ export const Avater = async () => {
       <IconText icon={<ImTwitter />} text={profile.twitter} />
       <IconText icon={<BsLinkedin />} text={profile.linkedIN} />
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 text-text">
         <PiTagFill />
         {profile.skillTags.map((skill, indx) => {
           return (
-            <p key={indx} className="bg-slate-100 px-2 text-sm rounded">
+            <p key={indx} className="bg-text/10 shadow px-2 text-sm rounded">
               {skill}
             </p>
           );

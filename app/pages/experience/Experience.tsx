@@ -11,7 +11,7 @@ const Experience = async () => {
         {experience.map((exp, ind) => {
           return (
             <div
-              className=" bg-white  flex flex-wrap gap-4 rounded-2xl p-4 shadow   border-slate-200 "
+              className=" bg-secondary  flex flex-wrap gap-4 rounded-2xl p-4 shadow   border-slate-200 "
               key={ind}
             >
               <div className="">
@@ -24,19 +24,19 @@ const Experience = async () => {
                 />
               </div>
               <div>
-                <p className="font-bold text-2xl text-blue-600">
-                  {exp.company}
+                <p className="font-bold text-2xl text-primary">{exp.company}</p>
+                <p className="font-normal text-sm text-text/90">
+                  {exp.location}
                 </p>
-                <p className="font-normal text-sm">{exp.location}</p>
-                <div className="p-2">
+                <div className="p-2 text-text">
                   {exp.positions.map((pos, indx) => {
                     return (
                       <div key={indx}>
                         <p className="font-medium text-xl">
-                          <span className="pr-2 text-gray-300">●</span>
+                          <span className="pr-2 text-text/50">●</span>
                           {pos.position}
                         </p>
-                        <div className="border-l-2 border-gray-300 ml-1 p-2 text-slate-700 text-sm ">
+                        <div className="border-l-2 border-text/50 ml-1 p-2 text-text/70 text-sm ">
                           <p>{pos.type}</p>
                           <p>
                             {new Date(pos.startDate).toLocaleString("default", {
@@ -56,7 +56,7 @@ const Experience = async () => {
                               return (
                                 <p
                                   key={index}
-                                  className="bg-gray-200 px-2 rounded"
+                                  className="bg-text/20 px-2 rounded border-secondary text-text/60"
                                 >
                                   {skl}
                                 </p>

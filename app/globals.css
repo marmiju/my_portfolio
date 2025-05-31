@@ -1,8 +1,27 @@
 @import "tailwindcss";
 
 
-/* /// bg-slate-300 */
-body {
-  @apply bg-[#fcfcfc]
+@theme {
+  --color-alter: var(--background);
+  --color-primary: var(--primary);
+  --color-text: var(--text);
+  --color-secondary: var(--secondary)
 }
 
+:root {
+  --background: #ffffff;
+  --primary: #000;
+  --text: #3b3b3b;
+  --secondary: #f8f8f8;
+}
+
+.dark {
+  --background: #000000;
+  --primary: #ffffff;
+  --text: #cccccc;
+  --secondary: #0e0e0e;
+}
+
+body {
+  background-color: var(--background);
+}
