@@ -12,7 +12,7 @@ const Experience = async () => {
         {experience.map((exp, ind) => {
           return (
             <div
-              className="border bg-white  flex flex-wrap gap-4 rounded-2xl  p-2 border-slate-200 "
+              className=" bg-white  flex flex-wrap gap-4 rounded-2xl p-4 shadow   border-slate-200 "
               key={ind}
             >
               <div className="">
@@ -34,9 +34,10 @@ const Experience = async () => {
                     return (
                       <div key={indx}>
                         <p className="font-medium text-xl">
-                          {"● " + pos.position}
+                          <span className="pr-2 text-gray-300">●</span>
+                          {pos.position}
                         </p>
-                        <div className="border-l-2 ml-1 p-2 text-slate-700">
+                        <div className="border-l-2 border-gray-300 ml-1 p-2 text-slate-700 text-sm ">
                           <p>{pos.type}</p>
                           <p>
                             {new Date(pos.startDate).toLocaleString("default", {
@@ -54,9 +55,9 @@ const Experience = async () => {
                           <div className="flex flex-wrap gap-2">
                             {pos.skills.map((skl, index) => {
                               return (
-                                <pre className="bg-gray-200 px-2" key={index}>
+                                <p className="bg-gray-200 px-2 rounded">
                                   {skl}
-                                </pre>
+                                </p>
                               );
                             })}
                           </div>

@@ -20,10 +20,10 @@ export const Singleportfolio = ({ pro }: props) => {
           <p className="text-xl font-semibold md:text-2xl">{pro.name}</p>
           <div className=" flex gap-4 items-center font-semibold text-blue-700 hover:cursor-pointer">
             <a target="_blank" href={pro.repo}>
-              ● source code
+              ● repo
             </a>
             <a target="_blank" className="font-semibold" href={pro.repo}>
-              ● repo
+              ● preview
             </a>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Hero } from "./pages/Hero/Hero";
 import SkillsSection from "./components/skillsSection/SkillsSection";
 import Experience from "./pages/experience/Experience";
 import Projects from "./pages/projects/Projects";
+import Leetcode from "./components/Leetcode/Leetcode";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
 
       <div className="h-screen">
+        <Leetcode />
         <SkillsSection />
         <section id="experiences">
           <Experience />
