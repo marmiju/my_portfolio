@@ -5,7 +5,8 @@ import { FetchLeetCode } from "@/lib/CP/LeetCode";
 const Leetcode = async () => {
   const profile = await FetchLeetCode();
   return (
-    <div className="flex flex-wrap justify-center gap-2 max-w-[1200px] mx-auto  border-slate-200 p-2 min-h-96">
+    <div className="flex flex-wrap justify-center gap-2 max-w-[1200px] mx-auto border rounded-2xl border-slate-200 p-2 min-h-96">
+      <p className="w-full text-xl text-slate-400 font-semibold">{`● LEETCODE`}</p>
       {profile && (
         <div className="max-w-full lg:max-w-[400px] ">
           <Avater />
