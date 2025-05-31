@@ -5,13 +5,15 @@ import React from "react";
 const Experience = async () => {
   const experience: ExperienceType[] = await FetchExperience();
   return (
-    <div className="max-w-[1200px] mx-auto my-10 p-2">
-      <h1 className="text-center font-bold text-2xl m-4 ">Experience</h1>
+    <div className="max-w-[1200px] mx-auto my-10 p-4 rounded-2xl backdrop-blur-xl border border-text/20">
+      <h1 className="text-center font-bold text-2xl m-4 text-text/50">
+        ● Experience
+      </h1>
       <div className="space-y-2">
         {experience.map((exp, ind) => {
           return (
             <div
-              className=" bg-secondary  flex flex-wrap gap-4 rounded-2xl p-4 shadow   border-slate-200 "
+              className=" bg-secondary/20 backdrop-blur-xl  flex flex-wrap gap-4 rounded-2xl p-4 shadow border   border-text/20 "
               key={ind}
             >
               <div className="">

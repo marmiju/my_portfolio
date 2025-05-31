@@ -10,10 +10,13 @@ export const Singleportfolio = ({ pro }: props) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      {isOpen && <PortfolioModal project={pro} />}
+      {isOpen && (
+        <PortfolioModal project={pro} onClose={() => setIsOpen(false)} />
+      )}
+
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="rounded-2xl grid border hover:cursor-pointer items-center bg-secondary border-text/20 
+        className="rounded-2xl grid border hover:cursor-pointer items-center bg-secondary/10 backdrop-blur-2xl border-text/20 
       hover:scale-102 duration-300 bg-clip-border overflow-hidden"
       >
         <img

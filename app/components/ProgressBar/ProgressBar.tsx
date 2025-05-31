@@ -17,7 +17,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ skillData }) => {
       </div>
       <div className="w-full  bg-secondary rounded-full mt-1">
         <div
-          className="h-full text-end bg-primary group-hover:bg-primary/70 duration-300 text-black text-sm p-1 rounded-full"
+          className="h-full text-end bg-primary group-hover:bg-primary/70 duration-300 text-alter text-sm p-1 rounded-full"
           style={{ width: `${skillData.description}%` }}
         >
           <p>{skillData.description + "%"}</p>

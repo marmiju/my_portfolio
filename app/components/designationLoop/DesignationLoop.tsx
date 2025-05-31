@@ -26,7 +26,7 @@ export const DesignationLoop = ({ data }: { data: string[] }) => {
         <h1 className="text-xl text-text/60 transition-all duration-500 ease-in-out">
           {data[index]}
         </h1>
-        <h1 className="text-lg text-secondary transition-all duration-500 ease-in-out">
+        <h1 className="text-lg text-text/20 transition-all duration-500 ease-in-out">
           {data[nextNextIndex]}
         </h1>
       </div>

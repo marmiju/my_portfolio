@@ -55,8 +55,8 @@ const SkillsSection = () => {
             <div
               key={i}
               className="border border-text/20 hover:cursor-pointer 
-              backdrop-blur-md transition-all duration-300 grayscale 
-              hover:grayscale-0 flex flex-col justify-center items-center 
+               transition-all duration-300 grayscale
+              hover:grayscale-0 flex flex-col justify-center backdrop-blur-2xl items-center 
               p-4 gap-4 group "
             >
               <Image

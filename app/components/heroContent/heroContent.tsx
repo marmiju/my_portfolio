@@ -36,11 +36,11 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
       >
         {profile.name}
       </h1>
-      <h1
+      {/* <h1
         className={`absolute opacity-5 text-primary block md:hidden lg:block  mt-20 text-4xl md:text-6xl lg:text-7xl font-extrabold ${montserat.className}`}
       >
         {profile.name}
-      </h1>
+      </h1> */}
       <div className="grid lg:flex justify-center md:justify-start lg:justify-between">
         <div>
           <button className="bg-secondary hover:cursor-pointer hover:bg-primary text-primary hover:text-secondary duration-300 px-4 py-1 text-sm font-medium rounded-full ">
