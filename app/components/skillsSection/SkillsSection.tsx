@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { getSkills } from "@/lib/Skills";
-import { montserat } from "@/lib/fonts/monsera";
+import { montserat, pixelfy } from "@/lib/fonts/monsera";
 import { SkillNave } from "../skillNav/SkillNave";
 import { useState, useEffect } from "react";
 
@@ -42,8 +42,12 @@ const SkillsSection = () => {
 
   return (
     <div
-      className={`grid 1 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto `}
+      className={`grid 1 text-gray-600 p-4 ${montserat.className} max-w-[1300px] mx-auto  py-20`}
     >
+      <p className={`text-3xl text-center text-text ${pixelfy.className}`}>
+        {" "}
+        ● Skills
+      </p>
       <div className=" mx-auto my-4">
         <SkillNave SkillNAv={handleSkillNav} />
       </div>

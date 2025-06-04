@@ -7,8 +7,8 @@ export type headerValue = {
 
 export const HeaderList = () => {
   const list: headerType = [
-    { name: "Hero", path: "/" },
-    { name: "Skills", path: "/skills" },
+    { name: "Hero", path: "/#" },
+    { name: "Skills", path: "/#skills" },
     { name: "Experiences", path: "/#experiences" },
     { name: "Projects", path: "/#projects" },
   ];

@@ -1,12 +1,15 @@
 import { ExperienceType, FetchExperience } from "@/lib/fatchExperience";
+import { pixelfy } from "@/lib/fonts/monsera";
 import Image from "next/image";
 import React from "react";
 
 const Experience = async () => {
   const experience: ExperienceType[] = await FetchExperience();
   return (
-    <div className="max-w-[1200px] mx-auto my-10 p-4 rounded-2xl backdrop-blur-xl border border-text/20">
-      <h1 className="text-center font-bold text-2xl m-4 text-text/50">
+    <div className="max-w-[1200px] mx-auto my-10 p-4  rounded-2xl backdrop-blur-xl border border-text/20">
+      <h1
+        className={`text-center font-bold text-5xl m-4 text-text/50 ${pixelfy.className}`}
+      >
         ● Experience
       </h1>
       <div className="space-y-2">

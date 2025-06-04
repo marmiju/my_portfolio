@@ -2,7 +2,7 @@
 
 import { Project } from "@/lib/ProjectsFetch";
 import React from "react";
-import { BiCross } from "react-icons/bi";
+import { MdDoNotDisturbOn } from "react-icons/md";
 
 interface Props {
   project: Project;
@@ -18,7 +18,7 @@ export const PortfolioModal: React.FC<Props> = ({ project, onClose }) => {
           onClick={onClose}
           className="absolute top-3 right-3 text-primary hover:text-red-500 transition"
         >
-          <BiCross />
+          <MdDoNotDisturbOn />
         </button>
 
         {/* Image */}

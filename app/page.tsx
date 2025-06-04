@@ -11,11 +11,13 @@ export default function Home() {
 
       <div className="h-screen">
         <Leetcode />
-        <SkillsSection />
-        <section id="experiences">
+        <section id="skills" className="pt-10 min-h-svh">
+          <SkillsSection />
+        </section>
+        <section id="experiences" className="pt-10 min-h-svh">
           <Experience />
         </section>
-        <section id="projects">
+        <section id="projects" className="pt-20 min-h-svh">
           <Projects />
         </section>
         <footer className="flex justify-center text-4xl text-center h-96 items-center">

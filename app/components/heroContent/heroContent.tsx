@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { DesignationLoop } from "../designationLoop/DesignationLoop";
-import { montserat } from "@/lib/fonts/monsera";
+import { montserat, pixelfy } from "@/lib/fonts/monsera";
+import { HiFolderDownload } from "react-icons/hi";
 
 export type ProfileType = {
   url: string;
@@ -32,7 +33,7 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
       </div>
       <h1 className="text-text">Hello! i&apos;m</h1>
       <h1
-        className={`text-4xl md:text-6xl text-primary font-bold lg:text-7xl ${montserat.className}`}
+        className={`text-4xl md:text-6xl text-primary font-bold lg:text-8xl ${pixelfy.className}`}
       >
         {profile.name}
       </h1>
@@ -43,8 +44,8 @@ export const HeroContent: React.FC<prop> = ({ profile }) => {
       </h1> */}
       <div className="grid lg:flex justify-center md:justify-start lg:justify-between">
         <div>
-          <button className="bg-secondary hover:cursor-pointer hover:bg-primary text-primary hover:text-secondary duration-300 px-4 py-1 text-sm font-medium rounded-full ">
-            Download rursume
+          <button className="flex items-center gap-2 bg-secondary hover:cursor-pointer hover:bg-primary text-primary hover:text-secondary duration-300 px-4 py-1 text-sm font-medium rounded-full ">
+            Download rursume <HiFolderDownload className="text-2xl" />
           </button>
         </div>
         <DesignationLoop data={profile.designation} />

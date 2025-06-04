@@ -1,6 +1,5 @@
 import React from "react";
 
-// ✅ Correctly import the type if it's exported as a type
 import type { skillspro } from "../skillsSection/SkillsSection";
 
 type ProgressBarProps = {
