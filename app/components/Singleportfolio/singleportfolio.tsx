@@ -16,8 +16,10 @@ export const Singleportfolio = ({ pro }: props) => {
 
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="rounded-2xl grid border hover:cursor-pointer items-center bg-secondary/10 backdrop-blur-2xl border-text/20 
-      hover:scale-102 duration-300 bg-clip-border overflow-hidden"
+        className={` grid  hover:cursor-pointer items-center bg-secondary/10 backdrop-blur-2xl border border-text/20 
+      hover:scale-102 duration-300 bg-clip-border overflow-hidden pb-2 rounded
+      
+      `}
       >
         <img
           className="w-full h-64 object-cover"

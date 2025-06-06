@@ -13,7 +13,7 @@ const Leetcode = async () => {
       >
         Competitive Programming
       </h1>
-      <div className="flex flex-wrap bg-secondary/10 backdrop-blur-2xl justify-center gap-2 max-w-[1200px] mx-auto border rounded-2xl border-text/20 p-2  min-h-96">
+      <div className="flex flex-wrap bg-secondary/10 backdrop-blur-2xl justify-center gap-2 max-w-[1200px] mx-auto  rounded-2xl border-text/20 p-2  min-h-96">
         <p
           className={`w-full text-text font-semibold flex items-center gap-2 text-3xl ${pixelfy.className}
         `}

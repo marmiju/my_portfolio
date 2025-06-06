@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className="h-screen">
         <Leetcode />
-        <section id="skills" className="pt-10 min-h-svh">
+        <section id="skills" className="grid pt-10 ">
           <SkillsSection />
         </section>
         <section id="experiences" className="pt-10 min-h-svh">

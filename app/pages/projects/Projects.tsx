@@ -7,7 +7,7 @@ const Projects = async () => {
   const projects: Project[] = await ProjectFetch();
   return (
     <div
-      className="border border-secondary max-w-[1200px] space-x-2 space-y-2
+      className=" border-secondary max-w-[1200px] space-x-2 space-y-2
       mx-auto rounded-2xl"
     >
       <p

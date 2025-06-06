@@ -59,12 +59,12 @@ const SkillsSection = () => {
             <div
               key={i}
               className="border border-text/20 hover:cursor-pointer 
-               transition-all duration-300 grayscale
+               transition-all duration-300 grayscale group
               hover:grayscale-0 flex flex-col justify-center backdrop-blur-2xl items-center 
               p-4 gap-4 group "
             >
               <Image
-                className="rounded-2xl duration-500 mx-2"
+                className="rounded-2xl duration-500 mx-2 group-hover:hidden"
                 src={data.url}
                 alt={data.title}
                 height={80}
@@ -72,7 +72,7 @@ const SkillsSection = () => {
               />
 
               {/* Tooltip-like hover effect at bottom */}
-              <div className="duration-300 transition-all bottom-[-50px] w-full  group-hover:flex justify-center">
+              <div className="duration-300 hidden transition-all bottom-[-50px] w-full  group-hover:flex justify-center">
                 <ProgressBar skillData={data} />
               </div>
             </div>

@@ -10,7 +10,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ skillData }) => {
   return (
     <div className="my-2 justify-center items-cente group w-full">
       <div className="flex text-sm justify-center w-full">
-        <p className=" overflow-ellipsis font-medium text-text">
+        <p className=" overflow-ellipsis  font-medium text-text font-bold">
           {skillData.title}
         </p>
       </div>

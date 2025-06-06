@@ -6,17 +6,19 @@ import React from "react";
 const Experience = async () => {
   const experience: ExperienceType[] = await FetchExperience();
   return (
-    <div className="max-w-[1200px] mx-auto my-10 p-4  rounded-2xl backdrop-blur-xl border border-text/20">
+    <div className="max-w-[1200px] mx-auto my-10 p-4  rounded-2xl backdrop-blur-xl  border-text/20">
       <h1
         className={`text-center font-bold text-5xl m-4 text-text/50 ${pixelfy.className}`}
       >
         ● Experience
       </h1>
-      <div className="space-y-2">
+      <div className="">
         {experience.map((exp, ind) => {
           return (
             <div
-              className=" bg-secondary/20 backdrop-blur-xl  flex flex-wrap gap-4 rounded-2xl p-4 shadow border   border-text/20 "
+              className={` backdrop-blur-xl  flex flex-wrap gap-4  p-4     border-text/20 ${
+                ind != experience.length - 1 && "border-b"
+              }`}
               key={ind}
             >
               <div className="">
@@ -29,7 +31,7 @@ const Experience = async () => {
                 />
               </div>
               <div>
-                <p className="font-bold text-2xl text-primary">{exp.company}</p>
+                <p className="font-bold text-2xl text-text">{exp.company}</p>
                 <p className="font-normal text-sm text-text/90">
                   {exp.location}
                 </p>
